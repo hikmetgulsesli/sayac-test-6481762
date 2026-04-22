@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+
+<html class="light" lang="tr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Sayaç - Ana Ekran</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700;900&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container-high": "#d5e3ff",
+                        "secondary-container": "#dac9ff",
+                        "on-tertiary": "#ffeef4",
+                        "on-surface": "#242f41",
+                        "primary-dim": "#3939c7",
+                        "surface-container-lowest": "#ffffff",
+                        "inverse-surface": "#040e1f",
+                        "primary-container": "#9396ff",
+                        "surface-variant": "#cdddfe",
+                        "error-dim": "#a70138",
+                        "primary": "#4647d3",
+                        "on-tertiary-fixed": "#3b002b",
+                        "secondary-fixed": "#dac9ff",
+                        "surface": "#f4f6ff",
+                        "surface-container": "#dee8ff",
+                        "on-error-container": "#510017",
+                        "on-primary": "#f4f1ff",
+                        "on-tertiary-container": "#63054a",
+                        "surface-dim": "#c3d5f8",
+                        "on-secondary": "#f8f0ff",
+                        "tertiary-fixed-dim": "#ef81c4",
+                        "on-error": "#ffefef",
+                        "on-secondary-fixed-variant": "#5f28c8",
+                        "on-surface-variant": "#515c70",
+                        "primary-fixed-dim": "#8387ff",
+                        "on-secondary-fixed": "#40009b",
+                        "surface-container-highest": "#cdddfe",
+                        "on-tertiary-fixed-variant": "#6e1354",
+                        "surface-tint": "#4647d3",
+                        "primary-fixed": "#9396ff",
+                        "outline-variant": "#a2adc4",
+                        "surface-bright": "#f4f6ff",
+                        "on-secondary-container": "#5517bf",
+                        "outline": "#6c778c",
+                        "tertiary-fixed": "#ff8ed2",
+                        "tertiary-dim": "#882a69",
+                        "tertiary-container": "#ff8ed2",
+                        "secondary-fixed-dim": "#ceb9ff",
+                        "on-primary-fixed-variant": "#0e009d",
+                        "tertiary": "#963776",
+                        "error-container": "#f74b6d",
+                        "on-background": "#242f41",
+                        "surface-container-low": "#ecf1ff",
+                        "background": "#f4f6ff",
+                        "on-primary-fixed": "#000000",
+                        "on-primary-container": "#0a0081",
+                        "error": "#b41340",
+                        "inverse-on-surface": "#929db4",
+                        "secondary-dim": "#5e26c7",
+                        "secondary": "#6a37d4",
+                        "inverse-primary": "#8083ff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Space Grotesk"],
+                        "display": ["Space Grotesk"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body {
+            background-color: #f4f6ff; /* Base background */
+            color: #242f41; /* on-background */
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="font-body antialiased flex flex-col min-h-screen max-w-[480px] mx-auto overflow-x-hidden relative">
+<!-- TopAppBar -->
+<header class="flex justify-between items-center px-6 py-4 w-full bg-[#f4f6ff] docked full-width top-0 z-40 bg-[#ecf1ff] flat no-line-rule sticky">
+<div class="text-2xl font-black text-[#4647d3] font-['Space_Grotesk'] tracking-tight">Sayaç</div>
+<button class="text-[#4647d3] p-2 rounded-full hover:bg-[#cdddfe] active:scale-95 duration-200 ease-out transition-colors">
+<span class="material-symbols-outlined" data-icon="dark_mode">dark_mode</span>
+</button>
+</header>
+<!-- Main Canvas -->
+<main class="flex-grow flex flex-col px-6 pt-6 pb-32 gap-8">
+<!-- Counter Title Area -->
+<div class="flex flex-col gap-2 relative z-10">
+<div class="flex items-center gap-3">
+<span class="px-4 py-1.5 rounded-full bg-secondary text-on-secondary font-label text-xs uppercase tracking-widest font-semibold">Günlük</span>
+<span class="px-4 py-1.5 rounded-full bg-surface-container-low text-on-surface-variant font-label text-xs uppercase tracking-widest font-medium">Egzersiz</span>
+</div>
+<h1 class="font-headline text-3xl font-bold text-primary mt-2">Su Tüketimi</h1>
+<p class="font-body text-sm text-outline">Günlük hedef: 3000 ml</p>
+</div>
+<!-- The Signature Counter Card (Hero) -->
+<div class="w-full aspect-square max-h-[360px] bg-gradient-to-br from-primary to-primary-container rounded-[24px] flex flex-col items-center justify-center relative overflow-hidden shadow-[0_8px_24px_rgba(36,47,65,0.06)] active:scale-[0.98] transition-transform duration-200">
+<!-- Glass effect overlay -->
+<div class="absolute inset-0 bg-white/10 backdrop-blur-sm z-0"></div>
+<div class="relative z-10 flex flex-col items-center">
+<div class="font-display text-[6rem] leading-none font-bold text-on-primary tracking-[-0.02em]">4</div>
+<div class="font-label text-on-primary/80 uppercase tracking-widest text-sm mt-2 font-medium">Bardak</div>
+</div>
+<!-- Quick Add Floating Action inside Card -->
+<button class="absolute bottom-6 bg-surface-container-lowest/20 backdrop-blur-md border border-white/20 text-on-primary rounded-full px-6 py-3 font-label text-sm font-semibold flex items-center gap-2 hover:bg-white/30 transition-colors">
+<span class="material-symbols-outlined text-[20px]" data-icon="add" data-weight="fill" style="font-variation-settings: 'FILL' 1;">add</span>
+<span>Hızlı Ekle</span>
+</button>
+</div>
+<!-- Tactical Controls -->
+<div class="flex items-center justify-between gap-4 bg-surface-container rounded-xl p-2 relative z-10">
+<!-- Decrease (Secondary) -->
+<button class="flex-1 bg-primary-container text-on-primary-container rounded-lg py-4 flex justify-center items-center active:scale-95 transition-transform">
+<span class="material-symbols-outlined text-[28px]" data-icon="remove" data-weight="fill" style="font-variation-settings: 'FILL' 1;">remove</span>
+</button>
+<!-- Increase (Primary) -->
+<button class="flex-[2] bg-primary text-on-primary rounded-lg py-4 flex justify-center items-center shadow-[0_4px_12px_rgba(70,71,211,0.3)] active:scale-95 transition-transform bg-gradient-to-br from-primary to-[#5b5ce6]">
+<span class="material-symbols-outlined text-[32px]" data-icon="add" data-weight="fill" style="font-variation-settings: 'FILL' 1;">add</span>
+</button>
+<!-- Reset (Tertiary/Ghost) -->
+<button class="flex-1 text-primary rounded-lg py-4 flex flex-col justify-center items-center active:scale-95 transition-transform">
+<span class="material-symbols-outlined text-[24px] mb-1" data-icon="refresh">refresh</span>
+<span class="font-label text-[10px] font-semibold uppercase tracking-wider">Sıfırla</span>
+</button>
+</div>
+<!-- Recent History Section -->
+<div class="flex flex-col gap-4 mt-4 relative z-10">
+<h2 class="font-headline text-lg font-bold text-on-surface">Son Eklenenler</h2>
+<div class="flex flex-col gap-3">
+<!-- History Item 1 -->
+<div class="flex items-center justify-between bg-surface-container-low p-4 rounded-xl">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-surface-container-highest flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[20px]" data-icon="water_drop" data-weight="fill" style="font-variation-settings: 'FILL' 1;">water_drop</span>
+</div>
+<div class="flex flex-col">
+<span class="font-body font-medium text-on-surface text-sm">1 Bardak Eklendi</span>
+<span class="font-label text-xs text-outline">14:30</span>
+</div>
+</div>
+<button class="text-outline-variant hover:text-error transition-colors">
+<span class="material-symbols-outlined text-[20px]" data-icon="undo">undo</span>
+</button>
+</div>
+<!-- History Item 2 -->
+<div class="flex items-center justify-between bg-surface-container-low p-4 rounded-xl">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-surface-container-highest flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[20px]" data-icon="water_drop" data-weight="fill" style="font-variation-settings: 'FILL' 1;">water_drop</span>
+</div>
+<div class="flex flex-col">
+<span class="font-body font-medium text-on-surface text-sm">1 Bardak Eklendi</span>
+<span class="font-label text-xs text-outline">11:15</span>
+</div>
+</div>
+<button class="text-outline-variant hover:text-error transition-colors">
+<span class="material-symbols-outlined text-[20px]" data-icon="undo">undo</span>
+</button>
+</div>
+</div>
+</div>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 pb-6 pt-3 bg-[#f4f6ff]/80 backdrop-blur-xl rounded-t-[24px] bg-[#ecf1ff] shadow-[0_-8px_24px_rgba(70,71,211,0.06)] md:hidden font-['Inter'] text-[11px] font-medium uppercase tracking-widest">
+<!-- Active Tab: Sayaç -->
+<button class="flex flex-col items-center justify-center bg-[#4647d3]/10 text-[#4647d3] rounded-2xl px-5 py-2 active:scale-90 transition-transform duration-150">
+<span class="material-symbols-outlined mb-1" data-icon="exposure" data-weight="fill" style="font-variation-settings: 'FILL' 1;">exposure</span>
+<span>Sayaç</span>
+</button>
+<!-- Inactive Tab: Geçmiş -->
+<button class="flex flex-col items-center justify-center text-slate-400 px-5 py-2 hover:text-[#4647d3] active:scale-90 transition-transform duration-150">
+<span class="material-symbols-outlined mb-1" data-icon="history">history</span>
+<span>Geçmiş</span>
+</button>
+<!-- Inactive Tab: Ayarlar -->
+<button class="flex flex-col items-center justify-center text-slate-400 px-5 py-2 hover:text-[#4647d3] active:scale-90 transition-transform duration-150">
+<span class="material-symbols-outlined mb-1" data-icon="settings">settings</span>
+<span>Ayarlar</span>
+</button>
+</nav>
+</body></html>

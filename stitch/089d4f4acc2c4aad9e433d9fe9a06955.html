@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="tr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Sayaç - Dark Theme</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700;900&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container-high": "#d5e3ff",
+                        "secondary-container": "#dac9ff",
+                        "on-tertiary": "#ffeef4",
+                        "on-surface": "#242f41",
+                        "primary-dim": "#3939c7",
+                        "surface-container-lowest": "#ffffff",
+                        "inverse-surface": "#040e1f",
+                        "primary-container": "#9396ff",
+                        "surface-variant": "#cdddfe",
+                        "error-dim": "#a70138",
+                        "primary": "#4647d3",
+                        "on-tertiary-fixed": "#3b002b",
+                        "secondary-fixed": "#dac9ff",
+                        "surface": "#f4f6ff",
+                        "surface-container": "#dee8ff",
+                        "on-error-container": "#510017",
+                        "on-primary": "#f4f1ff",
+                        "on-tertiary-container": "#63054a",
+                        "surface-dim": "#c3d5f8",
+                        "on-secondary": "#f8f0ff",
+                        "tertiary-fixed-dim": "#ef81c4",
+                        "on-error": "#ffefef",
+                        "on-secondary-fixed-variant": "#5f28c8",
+                        "on-surface-variant": "#515c70",
+                        "primary-fixed-dim": "#8387ff",
+                        "on-secondary-fixed": "#40009b",
+                        "surface-container-highest": "#cdddfe",
+                        "on-tertiary-fixed-variant": "#6e1354",
+                        "surface-tint": "#4647d3",
+                        "primary-fixed": "#9396ff",
+                        "outline-variant": "#a2adc4",
+                        "surface-bright": "#f4f6ff",
+                        "on-secondary-container": "#5517bf",
+                        "outline": "#6c778c",
+                        "tertiary-fixed": "#ff8ed2",
+                        "tertiary-dim": "#882a69",
+                        "tertiary-container": "#ff8ed2",
+                        "secondary-fixed-dim": "#ceb9ff",
+                        "on-primary-fixed-variant": "#0e009d",
+                        "tertiary": "#963776",
+                        "error-container": "#f74b6d",
+                        "on-background": "#242f41",
+                        "surface-container-low": "#ecf1ff",
+                        "background": "#f4f6ff",
+                        "on-primary-fixed": "#000000",
+                        "on-primary-container": "#0a0081",
+                        "error": "#b41340",
+                        "inverse-on-surface": "#929db4",
+                        "secondary-dim": "#5e26c7",
+                        "secondary": "#6a37d4",
+                        "inverse-primary": "#8083ff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {},
+                    "fontFamily": {
+                        "headline": ["Space Grotesk"],
+                        "display": ["Space Grotesk"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    },
+                    "fontSize": {}
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            /* Fallback overrides for custom dark mode request since Tailwind config doesn't have specific dark tokens requested */
+            --bg-dark: #0F172A;
+            --surface-dark: #1E293B;
+            --primary-dark: #818CF8;
+            --on-primary-dark: #ffffff;
+            --text-dark: #f8fafc;
+            --text-muted-dark: #94a3b8;
+            background-color: var(--bg-dark);
+            color: var(--text-dark);
+        }
+        .dark-surface {
+            background-color: var(--surface-dark);
+        }
+        .dark-primary-text {
+            color: var(--primary-dark);
+        }
+        .dark-primary-bg {
+            background-color: var(--primary-dark);
+            color: var(--on-primary-dark);
+        }
+        .dark-primary-gradient {
+            background: linear-gradient(135deg, #6366f1, #818cf8);
+        }
+    </style>
+</head>
+<body class="font-body min-h-screen flex flex-col pb-24 selection:bg-primary selection:text-on-primary">
+<!-- TopAppBar from JSON -->
+<header class="bg-[#f4f6ff] dark:bg-slate-950 docked full-width top-0 sticky z-50">
+<div class="flex justify-between items-center px-6 py-4 w-full bg-[#ecf1ff] dark:bg-slate-900 flat no-line-rule">
+<h1 class="text-2xl font-black text-[#4647d3] dark:text-[#9396ff] font-['Space_Grotesk']">Sayaç</h1>
+<div class="flex items-center gap-4">
+<button class="text-[#4647d3] dark:text-[#9396ff] hover:bg-[#cdddfe] dark:hover:bg-slate-800 transition-colors active:scale-95 duration-200 ease-out p-2 rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">dark_mode</span>
+</button>
+</div>
+</div>
+</header>
+<!-- Main Canvas -->
+<main class="flex-grow flex flex-col items-center justify-center px-6 pt-8 pb-12 w-full max-w-lg mx-auto">
+<!-- Category Chips -->
+<div class="flex gap-3 mb-8 self-start overflow-x-auto w-full pb-2 scrollbar-hide">
+<button class="dark-primary-bg px-5 py-2 rounded-full font-label text-sm uppercase tracking-wider font-medium flex-shrink-0 transition-transform active:scale-95">
+                Günlük
+            </button>
+<button class="dark-surface text-[#94a3b8] px-5 py-2 rounded-full font-label text-sm uppercase tracking-wider font-medium flex-shrink-0 transition-transform active:scale-95 hover:text-white">
+                Egzersiz
+            </button>
+<button class="dark-surface text-[#94a3b8] px-5 py-2 rounded-full font-label text-sm uppercase tracking-wider font-medium flex-shrink-0 transition-transform active:scale-95 hover:text-white">
+                Su
+            </button>
+</div>
+<!-- The Signature Counter Card -->
+<div class="w-full relative group">
+<!-- Ghost Border / Ambient Light Effect for Dark Mode -->
+<div class="absolute -inset-1 bg-gradient-to-br from-[#818CF8]/20 to-transparent rounded-[32px] blur-xl opacity-50"></div>
+<div class="dark-surface rounded-[24px] p-10 flex flex-col items-center justify-center relative z-10 w-full aspect-square transition-transform duration-300 ease-out active:scale-[0.98] border border-white/5 shadow-2xl">
+<div class="absolute top-6 right-6">
+<button class="text-[#94a3b8] hover:text-[#818CF8] transition-colors p-2 flex items-center justify-center">
+<span class="material-symbols-outlined">more_vert</span>
+</button>
+</div>
+<div class="flex-grow flex items-center justify-center flex-col -mt-4">
+<h2 class="font-display text-[6rem] leading-none tracking-tighter dark-primary-text font-black select-none" style="letter-spacing: -0.04em;">
+                        42
+                    </h2>
+<p class="font-body text-[#94a3b8] mt-2 text-lg">Hedef: 100</p>
+</div>
+<!-- Circular Progress Indicator (Decorative) -->
+<svg class="absolute inset-0 w-full h-full pointer-events-none opacity-20 transform -rotate-90" viewbox="0 0 100 100">
+<circle class="transition-all duration-500 ease-out" cx="50" cy="50" fill="none" r="46" stroke="#818CF8" stroke-dasharray="289" stroke-dashoffset="167" stroke-width="2"></circle>
+</svg>
+</div>
+</div>
+<!-- Tactile Controls -->
+<div class="w-full mt-10 grid grid-cols-3 gap-4 items-center">
+<button class="dark-surface text-white rounded-xl h-16 flex items-center justify-center hover:bg-[#2c3e50] active:scale-95 transition-all duration-200">
+<span class="material-symbols-outlined text-3xl">remove</span>
+</button>
+<button class="dark-primary-gradient text-white rounded-2xl h-20 flex items-center justify-center shadow-[0_8px_24px_rgba(129,140,248,0.25)] active:scale-95 transition-all duration-200 col-span-1">
+<span class="material-symbols-outlined text-4xl" style="font-variation-settings: 'FILL' 1;">add</span>
+</button>
+<button class="text-[#94a3b8] hover:text-white rounded-xl h-16 flex items-center justify-center font-label text-sm uppercase tracking-wider font-semibold active:scale-95 transition-all duration-200">
+                Sıfırla
+            </button>
+</div>
+</main>
+<!-- BottomNavBar from JSON -->
+<nav class="bg-[#f4f6ff]/80 dark:bg-slate-950/80 backdrop-blur-xl fixed bottom-0 w-full rounded-t-[24px] bg-[#ecf1ff] dark:bg-slate-900 shadow-[0_-8px_24px_rgba(70,71,211,0.06)] md:hidden z-50">
+<div class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 pb-6 pt-3">
+<!-- Active Item: Sayaç -->
+<button class="flex flex-col items-center justify-center bg-[#4647d3]/10 dark:bg-[#9396ff]/10 text-[#4647d3] dark:text-[#9396ff] rounded-2xl px-5 py-2 font-['Inter'] text-[11px] font-medium uppercase tracking-widest active:scale-90 transition-transform duration-150 group">
+<span class="material-symbols-outlined mb-1 group-hover:text-[#4647d3] dark:group-hover:text-[#9396ff]" style="font-variation-settings: 'FILL' 1;">exposure</span>
+<span>Sayaç</span>
+</button>
+<!-- Inactive Item: Geçmiş -->
+<button class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 px-5 py-2 font-['Inter'] text-[11px] font-medium uppercase tracking-widest active:scale-90 transition-transform duration-150 group hover:text-[#4647d3] dark:hover:text-[#9396ff]">
+<span class="material-symbols-outlined mb-1 group-hover:text-[#4647d3] dark:group-hover:text-[#9396ff]">history</span>
+<span>Geçmiş</span>
+</button>
+<!-- Inactive Item: Ayarlar -->
+<button class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 px-5 py-2 font-['Inter'] text-[11px] font-medium uppercase tracking-widest active:scale-90 transition-transform duration-150 group hover:text-[#4647d3] dark:hover:text-[#9396ff]">
+<span class="material-symbols-outlined mb-1 group-hover:text-[#4647d3] dark:group-hover:text-[#9396ff]">settings</span>
+<span>Ayarlar</span>
+</button>
+</div>
+</nav>
+<!-- Desktop Nav Fallback (Hidden on Mobile) -->
+<nav class="hidden md:flex fixed top-0 right-6 h-full items-center justify-center z-40 pointer-events-none">
+<div class="bg-slate-900/50 backdrop-blur-md rounded-full p-2 flex flex-col gap-4 pointer-events-auto border border-white/5">
+<button class="bg-[#9396ff]/20 text-[#9396ff] p-3 rounded-full flex items-center justify-center group" title="Sayaç">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">exposure</span>
+</button>
+<button class="text-slate-500 hover:text-[#9396ff] p-3 rounded-full flex items-center justify-center transition-colors group" title="Geçmiş">
+<span class="material-symbols-outlined">history</span>
+</button>
+<button class="text-slate-500 hover:text-[#9396ff] p-3 rounded-full flex items-center justify-center transition-colors group" title="Ayarlar">
+<span class="material-symbols-outlined">settings</span>
+</button>
+</div>
+</nav>
+</body></html>
