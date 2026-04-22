@@ -1,6 +1,9 @@
 src/types/index.ts
 src/utils/storage.ts
 src/utils/time.ts
+src/hooks/useCounter.ts
+src/hooks/useHistory.ts
+src/hooks/useTheme.ts
 src/index.css
 tailwind.config.js
 vite.config.ts
@@ -13,3 +16,9 @@ jest.config.js
 src/test/setup.ts
 src/test/utils.ts
 src/setupTests.ts
+src/screens/CounterPage.tsx
+src/screens/HistoryPage.tsx
+src/screens/SettingsPage.tsx
+src/App.tsx
+src/main.tsx
+index.html
